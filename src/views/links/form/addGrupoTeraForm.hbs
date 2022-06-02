@@ -1,19 +1,32 @@
-<div class="container">
-    <div class="row">
+<div class="container p-4 container-lg">
+    <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <form action="POST">
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                        <option value="San Francisco">
-                        <option value="New York">
-                        <option value="Seattle">
-                        <option value="Los Angeles">
-                        <option value="Chicago">
-                        </datalist>
+                    <form action="../../links/form/addGrupoTeraForm.hbs" method="POST">
+
+                            <h3 class="align-items-center">
+                                Presentaciones
+                            </h3>
+
+
+                        <div class="form-group">
+
+                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Tipo Presentación" name="presentacion">
+                            <datalist id="datalistOptions">
+                                <option value="Areosol">
+                                <option value="Cásulas">
+                                <option value="Crema">
+                                <option value="Gragea">
+                                <option value="Gotas">
+                            </datalist>
+                        </div>
                         
-                        <input type="submit">
+                        
+                            <div class="d-grid gap-2">
+                                <input type="submit" value="ENVIAR"
+                                    class="btn btn btn-outline-success btn-block form-control" name="enviar">
+                            </div>
                     </form>
                 </div>
             </div>
