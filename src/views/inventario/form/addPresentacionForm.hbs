@@ -3,7 +3,7 @@
         <div class="col-md-4">
             <div class="card">
                 <div class="card-body">
-                    <form action="../../links/form/addPresentacioForm.hbs" method="POST">
+                    <form action="../form/addPresentacionForm.hbs" method="POST">
 
                             <h3 class="align-items-center">
                                 Presentaciones
@@ -12,16 +12,12 @@
 
                         <div class="form-group">
 
-                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Tipo Presentación" name="presentacion">
-                            <datalist id="datalistOptions">
-                                <option value="Areosol">
-                                <option value="Cásulas">
-                                <option value="Crema">
-                                <option value="Gragea">
-                                <option value="Gotas">
-                            </datalist>
-                        </div>
-                        
+                            <input 
+                            class="form-control" 
+                            type="text"  
+                            placeholder="Tipo Presentación" 
+                            name="presentacion"
+                            >
                         
                             <div class="d-grid gap-2">
                                 <input type="submit" value="ENVIAR"

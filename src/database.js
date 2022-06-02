@@ -6,7 +6,7 @@ const {database_2}= require("./keys");
 
 
 
-const pool = mysql.createPool(database_2);
+const pool = mysql.createPool(database_2); //La conexiónn a la base de datos
 
 pool.getConnection((err,connection) =>{
     if(err){
@@ -31,4 +31,4 @@ pool.getConnection((err,connection) =>{
 //utilizando promesas
 pool.query = promisify(pool.query);
 
-module.exports = pool;
+module.exports = pool; //Exportamos la conexión donde podes requerir a futuro 
