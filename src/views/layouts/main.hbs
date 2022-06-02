@@ -15,11 +15,10 @@
     <script src="https://kit.fontawesome.com/f9a79d286b.js" crossorigin="anonymous"></script>
 
     {{!--Estilo propios--}}
-    <link rel="stylesheet" href="../../public/css/style.css">
-
+    <link rel="preload" href="/src/public/css/style.css" as="style">
+    <link rel="stylesheet" href="/src/public/css/style.css">
     {{!--Script js--}}
-    <link rel="stylesheet" href="../../public/js/script.js">
-    
+     
     <title>INVENTARIO</title>
 </head>
 
@@ -27,12 +26,11 @@
 
 {{!--Navegation---}}
 
-            {{>navigation}}
-
             {{{body}}}
 
 {{!---Footer---}}
 
+{{>footer}}
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
