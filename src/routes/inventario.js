@@ -3,7 +3,30 @@ const express = require("express");
 const router = express.Router();
 const conn = require("../database")
 
-///// ----- GET ----------  /////
+///-----------GET LIST----------//////
+//Presentacion list -Main
+router.get("/list",(req,res)=>{
+    res.render("../views/partials/navigationList.hbs");
+});
+
+//Grupo terapeutico Lis
+router.get("/listGrupoTerapeutico",(req,res)=>{
+
+    res.render("../views/inventario/list/listGrupoTerapeutico.hbs");
+});
+
+//Presentacion Laboratorio
+router.get("/listLaboratorio",(req,res)=>{
+
+    res.render("../views/inventario/list/listLaboratorio.hbs");
+});
+
+//Presentacion Presentacion
+router.get("/listPresentacion",(req,res)=>{
+
+    res.render("../views/inventario/list/listPresentacion.hbs");
+});
+///// ----- GET Inventario ----------  /////
 
 router.get("/", (req, res) =>{ 
     res.render("../views/partials/welcome.hbs");
@@ -27,7 +50,7 @@ router.get("/addGrupoTerapeutico", (req, res) =>{
     res.render("../views/inventario/form/addGrupoTerapeutico.hbs");
 });
 
-///// ----- POST ----------  /////
+///// ----- POST Inventario ----------  /////
 
 //ENVIAR EL DATOS DE Laboratorio
 router.post("/addLaboratorio", async (req, res) =>{

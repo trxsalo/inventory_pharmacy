@@ -42,7 +42,7 @@ app.use((req,res,next) =>{
 //Routes
 app.use(require("./routes")); //el Archivo inicial
 app.use(require("./routes/login")); //el Archivo de login
-app.use("/inventario", require("./routes/inventario")); //el adminitracion de inventario
+app.use("/inventario", require("./routes/inventario")); //el adminitracion de inventario>
 
 
 //Public
