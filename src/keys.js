@@ -8,8 +8,8 @@ module.exports = {
         database: process.env.DB_NAMEDB
     },
     database_2: {
-        host: "127.0.0.1@3306",
-        user: "salome",
+        host: "localhost",
+        user: "root",
         password: "010819",
         database: "sql_inventario"
     }

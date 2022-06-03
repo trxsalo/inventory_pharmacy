@@ -2,7 +2,7 @@ const mysql = require("mysql");
 
 const {promisify} = require("util");
 
-const {database_2}= require("./keys");
+const {database, database_2}= require("./keys");
 
 
 
