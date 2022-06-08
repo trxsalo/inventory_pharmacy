@@ -53,6 +53,7 @@ router.get("/addGrupoTerapeutico", (req, res) =>{
 ///// ----- POST Inventario ----------  /////
 
 //ENVIAR EL DATOS DE Laboratorio
+/*
 router.post("/addLaboratorio", async (req, res) =>{
     const {nombre,correo,telefono}=req.body;
     //console.log(req.body);
@@ -88,6 +89,8 @@ router.post("/addPresentacion", async(req, res) =>{
     await conn.query("Insert into presentacion set ?", [newPresentacion])
     res.send("Post recivssssido");
 })
+
+*/
 
 
 
