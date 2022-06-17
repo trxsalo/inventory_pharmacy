@@ -1,4 +1,5 @@
 
+const { response } = require("express");
 const express = require("express");
 const router = express.Router();
 const conn = require("../database")
@@ -52,8 +53,11 @@ router.get("/addGrupoTerapeutico", (req, res) =>{
 
 ///// ----- POST Inventario ----------  /////
 
+
+
+
 //ENVIAR EL DATOS DE Laboratorio
-/*
+
 router.post("/addLaboratorio", async (req, res) =>{
     const {nombre,correo,telefono}=req.body;
     //console.log(req.body);
@@ -79,18 +83,22 @@ router.post("/addGrupoTerapeutico",async (req, res) =>{
 })
 
 //ENVIAR EL DATOS DE Laboratorio
+
 router.post("/addPresentacion", async(req, res) =>{
 
-    console.log(req.body);
-    const {nombre}= req.body;
-    const newPresentacion = {
-        nombre
-    }
-    await conn.query("Insert into presentacion set ?", [newPresentacion])
-    res.send("Post recivssssido");
+    await fetch("http://localhost:3000/post/postPresentacion",{
+        method:"Post",
+        body: JSON.stringify(req.body()),
+        headers:{
+            "Content-Type": "application/json"
+        }
+    }).then (res=> res.json())
+        .catch(error=>console.error("Error", error))
+        .then(response=> console.log("Sucesses", response))
+    
 })
 
-*/
+
 
 
 
